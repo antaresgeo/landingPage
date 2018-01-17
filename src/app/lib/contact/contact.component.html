@@ -1,0 +1,39 @@
+<div class="container-fluid">
+    <div class="content">
+        <section id="contact">
+			<div class="section-content">
+				<h1 class="section-header">Quieres Saber mas sobre <span><span>Cocktail Fest</span></span></h1>
+				<h3>Solicita más información sobre el evento y patrocinio.</h3>
+			</div>
+			<div class="contact-section">
+    			<div class="container">
+    				<form class="row" (submit)="save()" [formGroup]="form">
+    					<div class="col-md-6 form-line">
+    			  			<div class="form-group">
+    			  				<label for="exampleInputUsername">Nombre</label>
+    					    	<input type="text" class="form-control" formControlName="nombre">
+    				  		</div>
+    				  		<div class="form-group">
+    					    	<label for="exampleInputEmail">Email</label>
+    					    	<input type="email" class="form-control" formControlName="email">
+    					  	</div>
+    					  	<div class="form-group">
+    					    	<label for="telephone">No. de Celular</label>
+    					    	<input type="tel" class="form-control" formControlName="telefono">
+    			  			</div>
+    			  		</div>
+    			  		<div class="col-md-6">
+    			  			<div class="form-group">
+    			  				<label for ="description"> Mensaje</label>
+    			  			 	<textarea  class="form-control" formControlName="descripcion"></textarea>
+    			  			</div>
+    			  			<div>
+    			  				<button type="submit" [disabled]="!form.valid" class="btn btn-default submit"><i class="fa fa-paper-plane" aria-hidden="true"></i>  Send Message</button>
+    			  			</div>
+    					</div>
+    				</form>
+    			</div>
+            </div>
+		</section>
+    </div>
+</div>
